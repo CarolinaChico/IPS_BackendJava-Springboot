@@ -56,6 +56,6 @@ public class Medico {
     private Especialidad especialidad;  
     
     @OneToMany (mappedBy = "medico")
-    private List<Cita>citas;
+    private List<Cita>cita;
     
 }

@@ -4,7 +4,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import com.entregablebackend.entregablebackend.entity.Medico;
 
-@RepositoryRestResource(collectionResourceRel = "cita", path="citas")
+@RepositoryRestResource(collectionResourceRel = "citas", path="citas")
 @CrossOrigin(origins="http://localhost:3000")
 
 public interface CitaRepository extends CrudRepository<Medico, Long>{

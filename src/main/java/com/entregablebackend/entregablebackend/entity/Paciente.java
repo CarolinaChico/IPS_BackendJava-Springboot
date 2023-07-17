@@ -28,7 +28,8 @@ public class Paciente {
         this.phone = phone;
         this.dateOfBirth = dateOfBirth;
     }
-
+    public Paciente() {
+    }
     public Long getId() {
         return id;
     }

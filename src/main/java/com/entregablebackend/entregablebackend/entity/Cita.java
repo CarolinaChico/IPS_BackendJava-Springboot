@@ -1,4 +1,6 @@
 package com.entregablebackend.entregablebackend.entity;
+import java.time.LocalDate;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -12,7 +14,11 @@ public class Cita {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private LocalDate date;
 
+ 
+  
+    
     @ManyToOne
     @JoinColumn(name="medico_id")
     private Medico medico;
@@ -21,20 +27,16 @@ public class Cita {
     @JoinColumn(name="paciente_id")
     private Paciente paciente;
 
-    public Cita(Long id, Medico medico, Paciente paciente) {
-        this.id = id;
+    public Cita() {
+    }
+
+    public Cita(LocalDate date, Medico medico, Paciente paciente) {
+        this.date = date;
         this.medico =medico;
         this.paciente = paciente;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
+     
     public Medico getMedico() {
         return medico;
     }
@@ -50,10 +52,15 @@ public class Cita {
     public void setPaciente(Paciente paciente) {
         this.paciente = paciente;
     }
+    public LocalDate getDate() {
+        return date;
+    }
 
-  
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
 
-  
+       
     
 
     
