@@ -41,7 +41,7 @@ public class Especialidad {
         this.code = code;
     }
     
-   @OneToMany(mappedBy =  "Especialidad") 
+   @OneToMany(mappedBy =  "especialidad") 
    private List <Medico> medicos;
    
 

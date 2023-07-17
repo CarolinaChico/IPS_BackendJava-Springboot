@@ -53,7 +53,7 @@ public class Medico {
 
     @ManyToOne
     @JoinColumn(name="especialidad_id")
-    private Especialidad program;  
+    private Especialidad especialidad;  
     
     @OneToMany (mappedBy = "medico")
     private List<Cita>citas;
